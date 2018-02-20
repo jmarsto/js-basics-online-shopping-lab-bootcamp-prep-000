@@ -37,8 +37,8 @@ function viewCart() {
     var cartString = ""
       cartString += `In your cart, you have `
       for (var i = 0; i < cart.length; i++) {
-        var cartItem = cart[i];
-        var cartItemKey = Object.keys(cartItem);
+        var cartItem = cart[i]
+        var cartItemKey = Object.keys(cartItem)
         var cartItemPrice = Object.values(cartItem)
         if (i < (cart.length - 1)) {
         cartString += `${cartItemKey} at $${cartItemPrice}, `
