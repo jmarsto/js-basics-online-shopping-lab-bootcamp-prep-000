@@ -13,10 +13,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-var cartLiteral = []
-
 function addToCart(item) {
-  cartLiteral.push(item)
   console.log(`${item} has been added to your cart.`)
   item = {[item]: getRandomInt(100)}
   cart.push(item)
