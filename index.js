@@ -24,7 +24,6 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  
   if (cart.length === 0) {
     console.log(`Your shopping cart is empty.`)
   }
@@ -37,6 +36,9 @@ function viewCart() {
   else {
       console.log(`In your cart, you have `)
       for (var i = 0; i < cart.length; i++) {
+        var cartItem = cart[i];
+        var cartItemKey = Object.keys(cartItem);
+        var cartItemPrice = Object.values(cartItem)
         var complex = `${Object.keys(cart[i])} at $${cart[i][`${Object.keys(cart[i])}`]}, `
         console.log(`${complex}`)
     }
