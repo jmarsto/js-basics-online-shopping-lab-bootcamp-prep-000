@@ -64,9 +64,10 @@ function removeFromCart(item) {
 }
 
 
-
+}
 function placeOrder(cardNumber) {
   var returnOrder = `Your total cost is ${total()}, which will be charged to card ${cardNumber}.`
   cart = []
   return returnOrder
+  
 }
