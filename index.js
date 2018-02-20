@@ -41,10 +41,10 @@ function viewCart() {
         var cartItemKey = Object.keys(cartItem);
         var cartItemPrice = Object.values(cartItem)
         if (i < (cart.length - 1)) {
-        cartString += `${cartItemKey} at ${cartItemPrice}, `
+        cartString += `${cartItemKey} at $${cartItemPrice}, `
         }
         else {
-          cartString += `and ${cartItemKey} at ${cartItemPrice}.`
+          cartString += `and ${cartItemKey} at $${cartItemPrice}.`
           return cartString
         }
         }
