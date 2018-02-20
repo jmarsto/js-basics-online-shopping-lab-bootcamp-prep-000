@@ -13,10 +13,8 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-var cartLiteral = []
 
 function addToCart(item) {
-  cartLiteral.push(item)
   console.log(`${item} has been added to your cart.`)
   item = {[item]: getRandomInt(100)}
   cart.push(item)
@@ -65,12 +63,12 @@ function total() {
 function removeFromCart(item) {
   if (cartLiteral.includes(item)) {
     var What = cartLiteral.indexOf(item)
-    cart.splice(What, [1])
-    cartLiteral.splice(What, [1])
-    console.log(cart)
+    cart.splice(What, 1)
+    cartLiteral.splice(What, 1)
+    return cart
   }
   else {
-    console.log("That item is not in your cart.")
+    return "That item is not in your cart."
   }
 }
 
@@ -86,3 +84,7 @@ function placeOrder(cardNumber) {
     console.log("Sorry, we don't have a credit card on file for you.")
   }
 }
+
+
+
+
