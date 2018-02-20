@@ -60,7 +60,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  cartLiteral = []
+  var cartLiteral = []
   for (var i = 0; i < cart.length; i++) {
     var cartItem = cart[i]
     var cartItemKey = Object.keys(cartItem)
