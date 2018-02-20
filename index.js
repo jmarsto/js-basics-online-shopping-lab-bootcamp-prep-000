@@ -4,8 +4,10 @@ function getCart() {
  return cart;
 }
 
+var cartLiteral = []
+
 function setCart(c) {
-  cart = c;
+  cart = c; cartLiteral = c
   return cart;
 }
 
@@ -13,7 +15,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-var cartLiteral = []
+
 
 function addToCart(item) {
   cartLiteral.push(item)
