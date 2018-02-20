@@ -55,7 +55,9 @@ function viewCart() {
 function total() {
   var tot = 0
   for (var i = 0; i < cart.length; i++) {
-    tot += cart[i][`${Object.keys(cart[i])}`]
+    var cartItem = cart[i]
+        var cartItemPrice = Object.values(cartItem)
+    tot += parseInt(cartItemPrice)
   }
   return tot
 }
