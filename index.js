@@ -39,11 +39,14 @@ function viewCart() {
         var cartItem = cart[i];
         var cartItemKey = Object.keys(cartItem);
         var cartItemPrice = Object.values(cartItem)
-        var complex = `${Object.keys(cart[i])} at $${cart[i][`${Object.keys(cart[i])}`]}, `
-        console.log(`${complex}`)
-    }
-    console.log(`.`)
-}
+        if (i < (cart.length - 1)) {
+        console.log(`${cartItemKey} at ${cartItemPrice}, `)
+        }
+        else {
+          console.log(`and ${cartItemKey} at ${cartItemPrice}.`)
+        }
+        }
+      }
 }
 
 function total() {
