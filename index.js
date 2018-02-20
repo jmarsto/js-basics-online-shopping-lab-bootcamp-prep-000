@@ -6,7 +6,6 @@ function getCart() {
 
 function setCart(c) {
   cart = c;
-  cartLiteral = c;
   return cart;
 }
 
