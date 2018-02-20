@@ -34,20 +34,23 @@ function viewCart() {
     console.log(`In your cart, you have ${Object.keys(cart[0])} at $${cart[0][`${Object.keys(cart[0])}`]} and ${Object.keys(cart[1])} at $${cart[1][`${Object.keys(cart[1])}`]}.`)
   }
   else {
-      console.log(`In your cart, you have `)
+    var cartString = ""
+      cartString += `In your cart, you have `
       for (var i = 0; i < cart.length; i++) {
         var cartItem = cart[i];
         var cartItemKey = Object.keys(cartItem);
         var cartItemPrice = Object.values(cartItem)
         if (i < (cart.length - 1)) {
-        console.log(`${cartItemKey} at ${cartItemPrice}, `)
+        cartString += `${cartItemKey} at ${cartItemPrice}, `
         }
         else {
-          console.log(`and ${cartItemKey} at ${cartItemPrice}.`)
+          cartString += `and ${cartItemKey} at ${cartItemPrice}.`
+          return cartString
         }
         }
       }
 }
+
 
 function total() {
   var tot = 0
