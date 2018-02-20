@@ -67,10 +67,10 @@ function removeFromCart(item) {
     var What = cartLiteral.indexOf(item)
     cart.splice(What, 1)
     cartLiteral.splice(What, 1)
-    console.log(cart)
+    return cart
   }
   else {
-    console.log("That item is not in your cart.")
+    return "That item is not in your cart."
   }
 }
 
