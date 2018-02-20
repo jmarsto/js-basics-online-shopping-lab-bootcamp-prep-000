@@ -45,7 +45,7 @@ function viewCart() {
         }
         else {
           cartString += `and ${cartItemKey} at $${cartItemPrice}.`
-          return cartString
+          console.log(cartString)
         }
         }
       }
