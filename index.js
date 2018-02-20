@@ -36,7 +36,7 @@ function viewCart() {
   else {
       console.log(`In your cart, you have `)
       for (i = 0; i < cart.length; i++) {
-        var complex = `${Object.keys(cart[i])} at $${cart[i][`${Object.keys(${cart[i]})}`]}, `
+        var complex = `${Object.keys(cart[i])} at $${cart[i][`${Object.keys(cart[i])}`]}, `
         console.log(`${complex}`)
     }
     console.log(`.`)
