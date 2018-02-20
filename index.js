@@ -65,12 +65,12 @@ function total() {
 function removeFromCart(item) {
   if (cartLiteral.includes(item)) {
     var What = cartLiteral.indexOf(item)
-    cart.splice(What, 1)
-    cartLiteral.splice(What, 1)
-    console.log(cart)
+    cart.splice(What, [1])
+    cartLiteral.splice(What, [1])
+    return cart
   }
   else {
-    console.log("That item is not in your cart.")
+    return "That item is not in your cart."
   }
 }
 
