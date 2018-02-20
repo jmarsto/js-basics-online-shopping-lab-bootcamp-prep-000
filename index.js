@@ -35,7 +35,7 @@ function viewCart() {
   }
   else {
       console.log(`In your cart, you have `)
-      for (i = 0; i < cart.length; i++) {
+      for (var i = 0; i < cart.length; i++) {
         var complex = `${Object.keys(cart[i])} at $${cart[i][`${Object.keys(cart[i])}`]}, `
         console.log(`${complex}`)
     }
@@ -45,7 +45,7 @@ function viewCart() {
 
 function total() {
   var tot = 0
-  for (i = 0; i < cart.length; i++) {
+  for (var i = 0; i < cart.length; i++) {
     tot += cart[i][`${Object.keys(cart[i])}`]
   }
   return `$${tot}.`
