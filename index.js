@@ -60,16 +60,23 @@ function total() {
 }
 
 function removeFromCart(item) {
+  cartLiteral = []
+  for (var i = 0; i < cart.length; i++) {
+    var cartItem = cart[i]
+    var cartItemKey = Object.keys(cartItem)
+    var cartItemPrice = Object.values(cartItem)
+    cartLiteral.push(cartItemKey.toString())
+  }
   if (cartLiteral.includes(item)) {
-    var What = cartLiteral.indexOf(item)
-    cart.splice(What, [1])
-    cartLiteral.splice(What, [1])
+    var REMOVE = cartLiteral.indexOf(item)
+    cart.splice(REMOVE, [1])
     console.log(cart)
   }
   else {
     console.log("That item is not in your cart.")
   }
 }
+
 
 
 
